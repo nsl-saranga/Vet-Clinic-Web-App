@@ -1,0 +1,22 @@
+ID,User Story,Priority,Epic,Acceptance Notes
+US01,"As a user, I want to register so I can book appointments.",High,Authentication,"Form validation, hashed password storage, no duplicate emails"
+US02,"As a user, I want to log in securely to access my dashboard.",High,Authentication,"JWT-based auth, role-based redirection"
+US03,"As a user, I want to log out to protect my account.",High,Authentication,"Token removed, user redirected to login"
+US04,"As a user, I want to reset my password if I forget it.",Medium,Authentication,"Email reset link, temporary token, secure update"
+US05,"As a user, I want to create and manage pet profiles.",High,Pet Management,"Add, edit, delete pets; fields like name, species, vaccination, etc."
+US06,"As a user, I want to book an appointment with a vet.",High,Appointment Booking,"Pick pet, date, time, service; check vet availability"
+US07,"As a user, I want to view and cancel upcoming appointments.",High,Appointment Booking,Cancel button only before a certain time threshold
+US08,"As a user, I want to track the history of past appointments",Medium,Appointment Booking,History allows to view past appoinements
+US09,"As a vet, I want to view my upcoming appointments.",High,Vet Dashboard,Filter by date; see pet and owner info
+US10,"As a vet, I want to add notes and mark appointments as completed.",High,Vet Dashboard,Notes saved in visit history
+US11,"As an admin, I want to manage users (vet/client) and assign roles.",High,Admin Panel,Add/edit/delete users; role management
+US12,"As an admin, I want to manage veterinary services offered.",Must,Admin Panel,"Add/edit/delete services, pricing, duration"
+US13,"As a user, I want to view the services before booking.",Must,Public Pages,"List services, price, and estimated time"
+US14,"As a guest, I want to contact the clinic through a form.",Medium,Public Pages,"Contact form with name, email, message"
+US15,"As an admin, I want to view statistics (total users, visits, top services).",Low,Admin Analytics,"Graphs/charts, filter by time"
+US16,"As a user, I want to receive email confirmations after booking.",Low,Notifications,"Email with date, vet, pet details"
+US17,"As a vet, I want to access visit history of pets I have seen.",Medium,Vet Dashboard,"Search by pet, filter by date"
+US18,"As a user, I want to download visit reports in PDF format.",Low,Pet Management,Generate and download report for each appointment
+US19,"As a guest, I want to learn about the clinic and team on the homepage.",Medium,Public Pages,"About us, team bios, photos"
+US20,"As a user, I want to edit my profile and change my password.",Medium,User Profile,"Edit contact info, password change with validation"
+US21,"As an admin, I want to change homepage content from a dashboard.",Low,CMS/Website Management,Editable fields in dashboard
