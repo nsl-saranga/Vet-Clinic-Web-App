@@ -1,3 +1,24 @@
+
+:root {
+  --primary-purple: #AF0ABE;
+  --dark-purple: #8B0896;
+  --medium-purple: #C44CCC;
+  --light-purple: #E8A8ED;
+  --accent-purple: #D946EF;
+  --text-dark: #333;
+  --text-medium: #4F4F4F;
+  --text-light: #666;
+  --text-purple: #AF0ABE;
+  --border-color: #E5D1E7;
+  --light-bg: #FFE6FD;
+  --lighter-bg: #FFF5FF;
+  --dull-bg: #f9f9f9;
+  --white: #fff;
+  --google-red: #DB4437;
+  --facebook-blue: #4267B2;
+  --apple-black: #000000;
+}
+
 .App {
   text-align: center;
 }
@@ -13,8 +34,10 @@
   }
 }
 
+
+
 .App-header {
-  background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
