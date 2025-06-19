@@ -3,6 +3,7 @@ import { FaUser, FaLock, FaGoogle, FaFacebook, FaApple, FaPaw } from 'react-icon
 import { Link, useNavigate } from 'react-router-dom';
 import '../Login/Login.css';
 import { loginUser } from '../../services/authService';
+import Navbar from '../../components/navbar/navbar.js';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -88,6 +89,7 @@ const LoginPage = () => {
 
   return (
     <>
+  
       <div className="auth-container">
         <div className="auth-card">
           <div className="auth-header">
