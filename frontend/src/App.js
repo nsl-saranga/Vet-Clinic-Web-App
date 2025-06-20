@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import SignupPage from './pages/Register/Register.js';
 import LoginPage from './pages/Login/Login.js';
 import Dashboard from './pages/Home/HomePage.js';
+import Services from './pages/Services/Services.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/register" element={<SignupPage/>} />
               <Route path="/login" element={<LoginPage/>} />
               <Route path="/home" element={<Dashboard/>} />
+              <Route path="/services" element={<Services/>} />
           
             </Routes>
           </div>

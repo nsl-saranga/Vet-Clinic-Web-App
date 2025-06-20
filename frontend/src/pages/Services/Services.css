@@ -1,0 +1,158 @@
+/* === Services.css - Optimized & Responsive === */
+
+/* Custom Properties */
+:root {
+  --primary-purple: #AF0ABE;
+  --dark-purple: #8B0896;
+  --light-purple: #E8A8ED;
+  --accent-purple: #D946EF;
+
+  --text-dark: #333;
+  --text-medium: #4F4F4F;
+  --text-light: #666;
+
+  --border-color: #E5D1E7;
+  --light-bg: #FFE6FD;
+  --lighter-bg: #FFF5FF;
+  --dull-bg: #f9f9f9;
+  --white: #fff;
+
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --radius-lg: 12px;
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Services Section ===== */
+.all-services-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--lighter-purple);
+  /* border-radius: 12px; */
+  padding: 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.all-services-column {
+  flex: 1;
+  min-width: 280px;
+}
+
+.all-services-text-column h2 {
+  font-size: 2.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 1.5rem;
+}
+
+.all-services-text-column p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.all-services-book-appoinment-button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: var(--primary-purple);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.all-services-book-appoinment-button:hover {
+  background-color: var(--dark-purple);
+}
+
+/* Trust Indicators */
+.trust-indicators {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.indicator {
+  text-align: center;
+}
+
+.indicator .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-purple);
+}
+
+.indicator .label {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Image column */
+.all-services-image-column {
+  display: flex;
+  justify-content: center;
+}
+
+.all-services-image-column img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.all-services-image-column img:hover {
+  transform: scale(1.02);
+}
+
+
+/*all-services-cards-section*/
+.all-services-cards-section{
+  padding: 3rem 2rem;
+  background-color: var(--dull-bg);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .all-services-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .all-services-text-column h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .all-services-text-column p {
+    text-align: justify;
+  }
+
+  .all-services-book-appoinment-button {
+    width: 100%;
+  }
+
+  .trust-indicators {
+    flex-direction: column;
+    align-items: center;
+  }
+}

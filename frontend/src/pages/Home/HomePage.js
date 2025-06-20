@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   useEffect(() => {
   getServices()
-    .then(data => setServices(data))
+    .then(data => setServices(data.slice(0,3)))
     .catch(error => console.error("Failed to fetch services", error));
   }, []);
   
@@ -84,7 +84,7 @@ const Dashboard = () => {
          ))}
           </div>
        <div className="services-view-all-services">
-          <a href="#" className="services-view-all-link">
+          <a href="/services" className="services-view-all-link">
             <span>View all the services</span>
             <HiMiniArrowSmallRight className="services-view-all-icon" />
           </a>
