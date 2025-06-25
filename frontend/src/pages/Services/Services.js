@@ -5,9 +5,12 @@ import Navbar from '../../components/navbar/navbar';
 import { getServices } from "../../services/servicesService"; 
 import Card from "../../components/cards/card";
 import { HiMiniArrowSmallRight } from 'react-icons/hi2';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
   const [services, setServices] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getServices()
@@ -19,8 +22,9 @@ const Services = () => {
     console.log("Book appointment clicked");
   };
 
-  const handleServiceClick = (serviceName) => {
-    console.log(`Learn more about ${serviceName}`);
+  const handleServiceClick = (serviceId) => {
+    navigate(`/service/${serviceId}`);
+    console.log(`Learn more about ${serviceId}`);
   };
 
   return (
@@ -81,7 +85,7 @@ const Services = () => {
                 image={service.image}
                 title={service.name}
                 description={service.description}
-                onClick={() => handleServiceClick(service.name)}
+                onClick={() => handleServiceClick(service._id)}
               />
             ))}
           </div>

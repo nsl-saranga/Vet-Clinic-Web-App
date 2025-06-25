@@ -33,7 +33,7 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
-  gap: 3rem;
+  gap: 3rem;;
   align-items: center;
   background-color: var(--lighter-purple);
   /* border-radius: 12px; */
@@ -44,8 +44,15 @@
 }
 
 .all-services-column {
-  flex: 1;
+  
   min-width: 280px;
+}
+
+.all-services-text-column{
+  width: 60%;
+}
+.all-services-image-column{
+  width: 40%;
 }
 
 .all-services-text-column h2 {
@@ -82,7 +89,7 @@
 /* Trust Indicators */
 .trust-indicators {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 2rem;
   gap: 1rem;
 }
@@ -107,7 +114,7 @@
 /* Image column */
 .all-services-image-column {
   display: flex;
-  justify-content: center;
+  justify-content:right;
 }
 
 .all-services-image-column img {

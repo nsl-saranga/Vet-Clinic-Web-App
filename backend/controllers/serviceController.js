@@ -18,7 +18,7 @@ exports.createService = async (req, res) => {
       image: result.secure_url,
       description,
       reasons: JSON.parse(reasons),
-      subServices: JSON.parse(subServices),
+      subservices: JSON.parse(subServices),
       whenToSeekDoctor: JSON.parse(whenToSeekDoctor),
     });
 
@@ -36,5 +36,21 @@ exports.getAllServices = async (req, res) => {
     res.json(services);
   } catch (err) {
     res.status(500).json({ error: 'Failed to retrieve services' });
+  }
+};
+
+exports.getServiceById = async (req, res) => {
+  try {
+    const serviceId = req.params.id;
+    const service = await Service.findOne({ _id: serviceId });
+
+    if (!service) {
+      return res.status(404).json({ error: 'Service not found' });
+    }
+
+    res.json(service);
+  } catch (error) {
+    console.error('Error fetching service:', error);
+    res.status(500).json({ error: 'Server error' });
   }
 };

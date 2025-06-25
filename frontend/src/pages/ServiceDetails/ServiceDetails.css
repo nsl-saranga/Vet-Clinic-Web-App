@@ -1,0 +1,570 @@
+/* === Services.css - Optimized & Responsive === */
+
+/* Custom Properties */
+:root {
+  --primary-purple: #AF0ABE;
+  --dark-purple: #8B0896;
+  --light-purple: #E8A8ED;
+  --accent-purple: #D946EF;
+
+  --text-dark: #333;
+  --text-medium: #4F4F4F;
+  --text-light: #666;
+
+  --border-color: #E5D1E7;
+  --light-bg: #FFE6FD;
+  --lighter-bg: #FFF5FF;
+  --dull-bg: #f9f9f9;
+  --white: #fff;
+
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --radius-lg: 12px;
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.service-details-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--lighter-purple);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.service-details-column {
+  min-width: 280px;
+}
+
+.service-details-text-column {
+  width: 60%;
+}
+
+.service-details-image-column {
+  width: 40%;
+  display: flex;
+  justify-content: right;
+}
+
+.service-details-text-column h2 {
+  font-size: 2.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 1.5rem;
+}
+
+.service-details-text-column p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.service-details-text-column li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.service-details-book-appoinment-button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: var(--primary-purple);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-details-book-appoinment-button:hover {
+  background-color: var(--dark-purple);
+}
+
+.service-details-image-column img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-details-image-column img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Service Understanding Section ===== */
+.service-understanding-section {
+  padding: 3rem 2rem;
+  background-color: var(--dull-bg);
+}
+
+.service-understanding-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-understanding-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.service-understanding-header h2 {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.service-understanding-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-understanding-column {
+  min-width: 280px;
+}
+
+.service-understanding-text-column {
+  width: 60%;
+  text-align: center;
+  padding: auto;
+}
+
+.service-understanding-text-column ul {
+  list-style: disc;
+  color: var(--text-medium);
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.service-understanding-text-column li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.service-understanding-text-column li::marker {
+  color: var(--primary-purple);
+}
+
+.service-understanding-image-column {
+  width: 30%;
+  display: flex;
+  justify-content: left;
+}
+
+.service-understanding-image-column img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-understanding-image-column img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Understanding Points List with Icons ===== */
+.understanding-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.understanding-points-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.005rem;
+  transition: transform 0.2s ease;
+}
+
+.understanding-points-list li:hover {
+  transform: scale(1.01);
+}
+
+.understanding-points-list .icon {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.understanding-points-list .text {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.1;
+}
+
+/* ===== Trust Indicators (Shared Component) ===== */
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.indicator {
+  text-align: center;
+  min-width: 100px;
+}
+
+.indicator .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-purple);
+}
+
+.indicator .label {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* ===== Subservices Section ===== */
+.subservices-section {
+  padding: 2rem 2rem;
+  background-color: var(--dull-bg);
+}
+
+.subservices-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subservices-header {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.subservices-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  gap: 1.5rem;
+  justify-items: start;
+}
+
+.subservice-card {
+  background-color: var(--lighter-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subservice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.subservice-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+}
+
+.subservice-name {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-medium);
+  word-wrap: break-word;
+}
+
+/* ===== Seek Doctor Section ===== */
+.seek-doctor-section {
+  padding: 2rem 2rem;
+  background-color: var(--dull-bg);
+}
+
+.seek-doctor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seek-doctor-header {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* ===== Seek Doctor Points Section ===== */
+.seek-doctor-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.seek-doctor-points li {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.05rem;
+  transition: transform 0.2s ease;
+  text-align: justify;
+}
+
+.seek-doctor-points li:hover {
+  transform: scale(1.01);
+}
+
+.seek-doctor-points .icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.seek-doctor-points .text {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* ===== Tablet Responsiveness (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .service-understanding-content {
+    gap: 1.5rem;
+  }
+  
+  .service-understanding-text-column {
+    width: 55%;
+  }
+  
+  .service-understanding-image-column {
+    width: 40%;
+  }
+  
+  .subservices-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+/* ===== Mobile Responsiveness (up to 768px) ===== */
+@media (max-width: 768px) {
+  /* Service Details Section */
+  .service-details-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .service-details-text-column,
+  .service-details-image-column {
+    width: 100%;
+  }
+
+  .service-details-text-column {
+    text-align: justify;
+  }
+
+  .service-details-text-column h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .service-details-text-column p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-details-image-column {
+    justify-content: center;
+    order: -1;
+  }
+
+  .service-details-image-column img {
+    max-width: 300px;
+  }
+
+  .service-details-book-appoinment-button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Service Understanding Section */
+  .service-understanding-section {
+    padding: 2rem 1rem;
+  }
+  
+  .service-understanding-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .service-understanding-text-column,
+  .service-understanding-image-column {
+    width: 100%;
+  }
+
+  .service-understanding-text-column {
+    padding: 1rem 0;
+    order: 2;
+  }
+  
+  .service-understanding-image-column {
+    order: 1;
+    justify-content: center;
+  }
+
+  .service-understanding-header h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-understanding-image-column img {
+    max-width: 280px;
+  }
+
+  /* Trust Indicators */
+  .trust-indicators {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .indicator {
+    text-align: center;
+  }
+  
+  .indicator .number {
+    font-size: 1.3rem;
+  }
+  
+  .indicator .label {
+    font-size: 0.8rem;
+  }
+
+  /* Subservices Section */
+  .subservices-section {
+    padding: 2rem 1rem;
+  }
+  
+  .subservices-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subservices-cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .subservice-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Seek Doctor Section */
+  .seek-doctor-section {
+    padding: 2rem 1rem;
+  }
+  
+  .seek-doctor-header {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .seek-doctor-points .icon {
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+  }
+  
+  .seek-doctor-points .text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* ===== Small Mobile Responsiveness (up to 480px) ===== */
+@media (max-width: 480px) {
+  .service-understanding-section,
+  .subservices-section,
+  .seek-doctor-section {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .service-understanding-header h2,
+  .subservices-header,
+  .seek-doctor-header {
+    font-size: 1.3rem;
+  }
+  
+  .understanding-points-list .icon,
+  .seek-doctor-points .icon {
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+  }
+  
+  .understanding-points-list .text,
+  .seek-doctor-points .text {
+    font-size: 0.9rem;
+  }
+  
+  .subservice-card {
+    padding: 1rem;
+  }
+  
+  .subservice-number {
+    font-size: 1.5rem;
+  }
+  
+  .subservice-name {
+    font-size: 0.9rem;
+  }
+  
+  .trust-indicators {
+    gap: 0.3rem;
+  }
+  
+  .indicator .number {
+    font-size: 1.1rem;
+  }
+  
+  .indicator .label {
+    font-size: 0.75rem;
+  }
+}
