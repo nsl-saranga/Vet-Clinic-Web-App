@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href="/about" className="nav-link">About</a>
           <a href="/services" className="nav-link">Services</a>
           <a href="/my-pets" className="nav-link">My Pets</a>
-          <a href="/appointments" className="nav-link">Appointments</a>
+          <a href="/my-appointments" className="nav-link">Appointments</a>
           <a href="/contact" className="nav-link">Contact</a>
         </div>
 
@@ -47,7 +47,7 @@ const Navbar = () => {
           <a href="/about" className="mobile-link" onClick={toggleMenu}>About</a>
           <a href="/services" className="mobile-link" onClick={toggleMenu}>Services</a>
           <a href="/my-pets" className="mobile-link" onClick={toggleMenu}>My Pets</a>
-          <a href="/appointments" className="mobile-link" onClick={toggleMenu}>Appointments</a>
+          <a href="/my-appointments" className="mobile-link" onClick={toggleMenu}>Appointments</a>
           <a href="/contact" className="mobile-link" onClick={toggleMenu}>Contact</a>
           <div className="mobile-auth-buttons">
             <a href="/login" className="mobile-login-btn" onClick={toggleMenu}>Login</a>

@@ -9,6 +9,7 @@ import Services from './pages/Services/Services.js';
 import ServiceDetails from './pages/ServiceDetails/ServiceDetails.js';
 import MyPets from './pages/MyPets/MyPets.js';
 import PetForm from './pages/PetForm/PetForm.js';
+import MyAppointments from './pages/MyAppointments/MyAppointments.js';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/my-pets" element={<MyPets/>} />
               <Route path="/add-pet" element={<PetForm />} />
               <Route path="/edit-pet/:id" element={<PetForm />} />
+              <Route path="/my-appointments" element={<MyAppointments />} />
             </Routes>
           </div>
         </div>
