@@ -3,6 +3,7 @@ import './MyPets.css';
 import { getUserPets, deletePet } from '../../services/petService';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/navbar/navbar';
+import { FaDog, FaPaw } from 'react-icons/fa';
 
 const MyPets = () => {
   const [pets, setPets] = useState([]);
@@ -67,7 +68,7 @@ const MyPets = () => {
       <section className="my-pets-section services-section">
         <div className="services-container">
           <div className="my-pets-header">
-            <h2>All My Pets</h2>
+            <h2><FaDog className="icon-purple" />All My Pets</h2>
             <button className="add-pet-top-btn" onClick={handleAddPet}>
             ＋ Add a New Pet
             </button>

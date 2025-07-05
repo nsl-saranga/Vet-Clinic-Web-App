@@ -170,6 +170,86 @@ exports.getAppointments = async (req, res) => {
 };
 
 
+exports.submitMissedReason = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { reason } = req.body;
+
+    if (!reason || reason.trim() === '') {
+      return res.status(400).json({ message: 'Reason is required.' });
+    }
+
+    const appointment = await Appointment.findById(id);
+
+    if (!appointment) {
+      return res.status(404).json({ message: 'Appointment not found.' });
+    }
+
+    if (appointment.status !== 'missed') {
+      return res.status(400).json({ message: 'Cannot add reason to a non-missed appointment.' });
+    }
+
+    await Appointment.updateOne(
+      { _id: id },
+      { $set: { missedReason: reason } }
+    );
+
+    res.json({ message: 'Reason submitted successfully.' });
+  } catch (err) {
+    console.error('Missed reason error:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+exports.submitReview = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rating, review } = req.body;
+
+    if (!rating || rating < 1 || rating > 5) {
+      return res.status(400).json({ message: 'Rating must be between 1 and 5.' });
+    }
+
+    if (!review || review.trim() === '') {
+      return res.status(400).json({ message: 'Review is required.' });
+    }
+
+    const appointment = await Appointment.findById(id);
+
+    if (!appointment) {
+      return res.status(404).json({ message: 'Appointment not found.' });
+    }
+
+    if (appointment.status !== 'completed') {
+      return res.status(400).json({ message: 'Cannot add review to an uncompleted appointment.' });
+    }
+
+    // Prevent duplicate review
+    if (appointment.review && appointment.review.rating) {
+      return res.status(400).json({ message: 'This appointment has already been reviewed.' });
+    }
+
+    await Appointment.updateOne(
+      { _id: id },
+      {
+        $set: {
+          review: {
+            rating,
+            text: review
+          }
+        }
+      }
+    );
+
+
+    res.json({ message: 'Review submitted successfully.' });
+  } catch (err) {
+    console.error('Review error:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+
 // Update appointment status (Vet only)
 exports.updateAppointmentStatus = async (req, res) => {
   try {

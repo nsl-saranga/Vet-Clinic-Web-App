@@ -14,7 +14,22 @@ const appointmentSchema = new mongoose.Schema({
     type: String,
     enum: ['completed', 'upcoming', 'missed'],
     default: 'pending',
-  }
+  },
+  missedReason: {
+    type: String,
+    default: null
+  },
+  review: {
+    rating: {
+      type: Number,
+      min: 1,
+      max: 5
+    },
+    text: {
+      type: String,
+      trim: true
+    }
+  },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Appointment', appointmentSchema);

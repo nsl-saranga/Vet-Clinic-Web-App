@@ -1,0 +1,139 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box h3{
+    color:var(--dark-purple)
+
+}
+
+.modal-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.modal-box textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+.submit-reason-btn {
+  background-color: #4CAF50;
+  color: var(--white);
+ 
+
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-reason-btn:hover {
+  background-color: #45A049;
+}
+.reason-modal-cancel-btn {
+  background-color: #f44336;
+  color: var(--white);
+
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reason-modal-cancel-btn:hover {
+  background-color: #c62828;
+}
+
+.view-reason-text {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  min-height: 80px;
+  white-space: pre-wrap;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  resize: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ...existing styles... */
+
+.modal-label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: block;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+}
+
+.star-icon {
+  font-size: 1.5rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star-icon.filled {
+  color: #FFD700; /* gold */
+}
+
+.star-icon.clickable:hover {
+  color: #ffdb58; /* lighter gold hover */
+  cursor: pointer;
+}
+
+.star-icon.readonly {
+  cursor: default;
+}
+.modal-review-view-text{
+  text-align: left;
+}
+
+
